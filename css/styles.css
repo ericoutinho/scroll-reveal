@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#label{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    z-index: 999;
+}
+.content{
+    display: block;
+}
+.section{
+    display: block;
+    min-height: 300px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.grey{
+    background-color: grey;
+}
+.anima{
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.anima.left.play{
+    opacity: 1;
+    animation-name: left;
+    animation-duration: 1s;
+}
+
+@keyframes left{
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.anima.right.play{
+    opacity: 1;
+    animation-name: right;
+    animation-duration: 1s;
+}
+@keyframes right{
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
